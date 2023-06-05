@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Скачать обучение
+{% endblock %}
+
+{% block style %}
+    #linkPath {
+    width: 500px; /* Ширина поля в пикселах */
+    }
+{% endblock %}
+
+{% block body %}
+<script>
+    function myFunction() {
+      /* Get the text field */
+      var copyText = document.getElementById("linkPath");
+
+      /* Select the text field */
+      copyText.select();
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.value);
+
+    }
+</script>
+
+<div class="container-sm">
+    <h2>Скачивание видео и pdf из https://antitreningi.ru/</h2>
+    <br>
+        <div class="container">
+            <h4>Это займет несколько минут. Скачанный курс появится здесь:</h4>
+            <br>
+            <input id="linkPath" value="{{ files_url }}" readonly></input>
+            <button onclick="myFunction()">Копировать ссылку</button>
+        </div>
+</div>
+
+{% endblock %}
+

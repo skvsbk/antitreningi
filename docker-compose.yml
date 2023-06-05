@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  antitreningi:
+    build: .
+    container_name: antitreningi
+    restart: on-failure
+    ports:
+      - 8100:5000
+
+    volumes:
+      - /mnt/share/ОБУЧЕНИЕ_ПЕРСОНАЛА/antitreningi/:/code/app/downloads

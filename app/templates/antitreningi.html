@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Скачать обучение
+{% endblock %}
+
+{% block style %}
+    #url_course {
+    width: 500px; /* Ширина поля в пикселах */
+    }
+{% endblock %}
+
+{% block body %}
+<form method="get">
+<div class="container-sm">
+    <h2>Скачивание видео и pdf из https://antitreningi.ru/</h2>
+    <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                     <label>Имя</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="login" placeholder="someuser@domain.ru">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                     <label>Пароль</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="password" placeholder="Qw123456">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col row-cols-auto">
+                     <label>Ссылка на курс</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="url_course" placeholder="https://antitreningi.ru/student/253771/lessons" id="url_course">
+                </div>
+
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-sm">
+
+                </div>
+                <div class="col-10">
+                    <input type="submit" class="btn btn-primary btn-lg" name="get_course" value="Скачать">
+                </div>
+            </div>
+            <br>
+        </div>
+
+</div>
+</form>
+<div class="container-sm">
+    <h2>Чтобы всё получилось с первого раза:</h2>
+    <ul>
+        <li>Зайдите на сайт https://antitreningi.ru/ под своими учетными данными</li>
+        <li>Кликните на интересующий курс</li>
+        <li>Скопируйте из адресной строки ссылку на курс</li>
+        <li>Заплните поля выше (логин, пароль) и вставьте скопированную ссылку на курс</li>
+        <li>Нажмите кнопку "Скачать"</li>
+        <li>На вновь открывшейся странице скопируйте путь, по которому будут скачанные материалы курса, и в проводнике перейдите по этому пути</li>
+    </ul>
+    <br>
+    <h2>Замечания:</h2>
+    <ul>
+        <li>Скачаться могут только пройденные уроки, т.е. у которых статус "Зачет"</li>
+        <li>Путь целевой папки заканчивается цифрами из ссылки на курс. Если есть необходимость скачивать курс<br>
+            по мере прохождения уроков, не переименовывайте и не перемещайте целевую папку с материалами -<br>
+            в эту папку будет произведена "докачка" новых презентаций и видео</li>
+
+    </ul>
+
+</div>
+
+{% endblock %}
