@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Скачать видео из YouTube
+{% endblock %}
+
+{% block style %}
+    #url_video {
+    width: 500px; /* Ширина поля в пикселах */
+    }
+{% endblock %}
+
+{% block body %}
+<form method="get">
+<div class="container-sm">
+    <h2>Скачивание видео из <a href="https://youtube.ru" target="_blank" >https://youtube.ru</a></h2>
+    <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                     <label>1. Скопировать ссылку ролика с <a href="https://youtube.ru" target="_blank" >https://youtube.ru</a></label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                     <label>2. Вставить ссылку</label>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="url_video" id="url_video" placeholder="https://www.youtube.com/watch?v=OKf7dUROnOs" >
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col row-cols-auto">
+                     <label>3. Нажать кнопку</label>
+                </div>
+                <div class="col-10">
+                    <input type="submit" class="btn btn-primary btn-lg" name="get_video" value="Скачать">
+                </div>
+
+            </div>
+
+            <br>
+
+        </div>
+
+</div>
+</form>
+
+
+{% endblock %}

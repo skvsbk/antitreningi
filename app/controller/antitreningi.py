@@ -25,7 +25,7 @@ class Antitreningi:
         self.current_file_name = None
         self.file_set = set()  # None
 
-        download_path = os.path.join(os.path.abspath(Config.DOWNLOAD_FOLDER), re.findall(r'\d+', url_course)[0])
+        download_path = os.path.join(os.path.abspath(Config.DOWNLOAD_FOLDER_ANTITR), re.findall(r'\d+', url_course)[0])
 
         if not os.path.exists(download_path):
             os.makedirs(download_path)
@@ -177,6 +177,7 @@ class Antitreningi:
                 streams = yt.streams
             except:
                 # write the error file with theme, lesson - video not found
+                self.logger.warning(f'Can not get {url_yt} for {name_yt}')
                 return
             # for notify subscriber
             self.file_set = set(os.listdir(self.download_path))

@@ -10,4 +10,5 @@ services:
       - 8100:5000
 
     volumes:
-      - /mnt/share/ОБУЧЕНИЕ_ПЕРСОНАЛА/antitreningi/:/code/app/downloads
+      - /mnt/share/ОБУЧЕНИЕ_ПЕРСОНАЛА/antitreningi/:/code/app/dwl_antitr
+      - /mnt/share/ОБУЧЕНИЕ_ПЕРСОНАЛА/youtube/:/code/app/dwl_ytb
